@@ -13,13 +13,17 @@
 // components
 
 
-// layout
+// layouts
 @import './layouts/header';
+@import './layouts/footer';
+
+// page home
 @import './pages/home/carousel';
 @import './pages/home/product';
 @import './pages/home/complex';
 @import './pages/home/blog';
 @import './pages/home/introduce';
-@import './layouts/footer';
 
-// pages
+
+// page detail
+@import './pages/detail/product';
