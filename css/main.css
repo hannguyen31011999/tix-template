@@ -2491,6 +2491,16 @@ footer .footer__content .footer__bot .image {
   .product .product__content .product__main .product__mainInfo .product__right {
     display: none;
   }
+  .tab-content #comment .review__tab--comment .review__tab--commentLeft {
+    width: 70%;
+  }
+  .tab-content #comment .review__tab--comment .review__tab--commentRight {
+    width: 30%;
+  }
+  .tab-content #comment .review__tab--comment .review__tab--commentRight img {
+    height: 12px;
+    width: 12px;
+  }
   .tab-content #comment .review__tab--listComment .review__tab--itemComment .review__tab--itemReply .review__tab--itemBot--like {
     width: 30%;
   }

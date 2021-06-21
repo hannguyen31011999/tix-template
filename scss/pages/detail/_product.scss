@@ -473,6 +473,18 @@
     }
     .tab-content {
         #comment {
+            .review__tab--comment {
+                .review__tab--commentLeft {
+                    width: 70%;
+                }
+                .review__tab--commentRight {
+                    width: 30%;
+                    img {
+                        height: 12px;
+                        width: 12px;
+                    }
+                }
+            }
             .review__tab--listComment {
                 .review__tab--itemComment {
                     .review__tab--itemReply {
