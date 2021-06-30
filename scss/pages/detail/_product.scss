@@ -2,14 +2,12 @@
     position: relative;
     overflow-x: hidden;
     padding-bottom: $pd-3;
+    background-color: rgb(10, 32, 41);
     .product__content{
         position: relative;
-        background-image: url('../../../img/lat-mat-48h-16177782153424.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        z-index: 9;
         .product__main {
+            position: relative;
+            z-index: 99;
             max-width: 840px;
             padding: $pd-3 * 2 0;
             .product__mainInfo {
@@ -147,39 +145,12 @@
                 }
             }
         }
-        .product__content--blur {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            background-image: url('../../../img/lat-mat-48h-16177782153424.png');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            filter:blur(10px);
-        }
-        .product__content--overlay {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            background-color: rgba(0, 0, 0,0.4);
-        }
-    }
-    .product__overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: #0A2029;
-        height: 100%;
-        width: 100%;
     }
     .product__review {
         position: relative;
         max-width: 840px;
         padding-top: $pd-3;
+        z-index: 9;
         .nav-tabs {
             .nav-item {
                 width: 125px;
@@ -197,6 +168,48 @@
             }
         }
         
+    }
+}
+
+.product {
+    .product__overlay {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        .product__overlay--image {
+            width: calc(100% + 5px);
+            height: auto;
+            filter: blur(15px);
+        }
+        .product__overlay--blur {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgb(10, 32, 41), transparent 100%);
+            z-index: 3;
+        }
+        .product__overlay--btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border: none;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0,0.3);
+            transition: all .2s;
+            display: none;
+            z-index: 100;
+            img {
+                height: 70px;
+                width: 70px;
+            }
+            &:hover {
+                background-color: rgba(0, 0, 0,0.2);
+            }
+        }
     }
 }
 
@@ -462,7 +475,7 @@
                         display: none;
                     }
                     .product__center {
-                        padding-left: $pd-1;
+                        padding-left: $pd-2;
                     }
                     .product__right {
                         display: none;
@@ -471,6 +484,25 @@
             }
         }
     }
+    .product {
+        .product__overlay {
+            .product__overlay--image {
+                filter: none;
+            }
+            .product__overlay--btn {
+                display: block;
+            }
+        }
+        .product__content {
+            .product__main {
+                padding-bottom: 0;
+                .product__center {
+                    padding-top: $pd-2;
+                }
+            }
+        }
+    }
+
     .tab-content {
         #comment {
             .review__tab--comment {
